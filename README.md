@@ -3,8 +3,7 @@
 
 Start the project and run the Gradle task `test`.
 
-The `patchExample` test fails with a 400 bad request.
+With the default `DomainObjetcReader`, the `patchExample` test fails with a 400 bad request.
+With the `CustomDomainObjectReader` the test passes.
 
-Uncomment the `domainObjectReaderCustomizer` in `JacksonConfig` to replace the
-`DomainObjectReader` with `CustomDomainObjectReader` and run the tests again.
-The test passes now. See the comments in `CustomDomainObjectReader`.
+See the comments in `CustomDomainObjectReader`.

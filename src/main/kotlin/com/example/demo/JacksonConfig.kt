@@ -2,6 +2,7 @@ package com.example.demo
 
 import com.fasterxml.jackson.databind.Module
 import com.fasterxml.jackson.module.kotlin.KotlinModule
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.zalando.jackson.datatype.money.MoneyModule
@@ -17,7 +18,8 @@ class JacksonConfig {
     fun moneyModule(): Module =
         MoneyModule()
 
-//    @Bean
-//    fun domainObjectReaderCustomizer() =
-//        DomainObjectReaderCustomizer()
+    @Bean
+    @ConditionalOnProperty("use-custom-domain-object-reader")
+    fun domainObjectReaderCustomizer() =
+        DomainObjectReaderCustomizer()
 }
