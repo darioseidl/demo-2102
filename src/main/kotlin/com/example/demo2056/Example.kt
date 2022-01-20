@@ -8,25 +8,28 @@ import org.jadira.usertype.moneyandcurrency.moneta.PersistentMoneyAmountAndCurre
 import org.javamoney.moneta.Money
 import java.io.Serializable
 import javax.money.CurrencyUnit
-import javax.money.Monetary
 import javax.persistence.*
 
 @Entity
 @TypeDefs(
-        TypeDef(name = "Money", typeClass = PersistentMoneyAmountAndCurrency::class, defaultForType = Money::class),
-        TypeDef(name = "CurrencyUnit", typeClass = PersistentCurrencyUnit::class, defaultForType = CurrencyUnit::class),
+    TypeDef(name = "Money", typeClass = PersistentMoneyAmountAndCurrency::class, defaultForType = Money::class),
+    TypeDef(name = "CurrencyUnit", typeClass = PersistentCurrencyUnit::class, defaultForType = CurrencyUnit::class),
 )
-class Example : Serializable {
+class Example(price: Money?) : Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
 
     @Columns(
-            columns = [
-                Column(name = "price_currency", nullable = false),
-                Column(name = "price_amount", nullable = false)
-            ]
+        columns = [
+            Column(name = "price_currency", nullable = false),
+            Column(name = "price_amount", nullable = false)
+        ]
     )
-    var price: Money = Money.of(123, Monetary.getCurrency("EUR"))
+    var price: Money? = price
+
+    override fun toString(): String =
+        "Example(price=$price)"
+
 }

@@ -17,4 +17,7 @@ class JacksonConfig {
     fun moneyModule(): Module =
         MoneyModule()
 
+//    @Bean
+//    fun domainObjectReaderCustomizer() =
+//        DomainObjectReaderCustomizer()
 }
