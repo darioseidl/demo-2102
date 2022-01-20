@@ -272,7 +272,7 @@ public class CustomDomainObjectReader extends DomainObjectReader {
 					//  but Money should not be handled like an entity (with nested properties)
 					//  but handled "normally" as a value type passed to the MonetaryAmountDeserializer
 					//  https://hibernate.atlassian.net/browse/HHH-14198
-					//  https://github.com/spring-projects/spring-data-rest/issues/2056
+					//  https://github.com/spring-projects/spring-data-rest/issues/2102
 					if (!property.getActualType().isAssignableFrom(Money.class))
 						if (property.isEntity()) {
 							i.remove();

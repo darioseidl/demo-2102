@@ -1,4 +1,4 @@
-package com.example.demo2056
+package com.example.demo
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.amshove.kluent.shouldNotBeNull
@@ -15,7 +15,7 @@ import org.springframework.http.MediaType
 import javax.money.Monetary
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class Demo2056ApplicationTests {
+class ApplicationTests {
 
     @LocalServerPort
     private val port = 0

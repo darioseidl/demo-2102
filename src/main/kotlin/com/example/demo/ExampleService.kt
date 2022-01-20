@@ -1,4 +1,4 @@
-package com.example.demo2056
+package com.example.demo
 
 import org.javamoney.moneta.Money
 import org.springframework.boot.ApplicationArguments

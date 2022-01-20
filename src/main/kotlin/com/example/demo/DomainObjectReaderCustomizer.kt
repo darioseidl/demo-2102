@@ -1,4 +1,4 @@
-package com.example.demo2056
+package com.example.demo
 
 import CustomDomainObjectReader
 import org.springframework.beans.BeansException

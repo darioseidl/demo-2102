@@ -1,4 +1,4 @@
-package com.example.demo2056
+package com.example.demo
 
 import com.fasterxml.jackson.databind.Module
 import com.fasterxml.jackson.module.kotlin.KotlinModule

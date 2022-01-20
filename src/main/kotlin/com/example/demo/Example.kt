@@ -1,4 +1,4 @@
-package com.example.demo2056
+package com.example.demo
 
 import org.hibernate.annotations.Columns
 import org.hibernate.annotations.TypeDef
